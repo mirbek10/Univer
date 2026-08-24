@@ -1,0 +1,247 @@
+.hero {
+  position: relative;
+  padding: 6rem 0 5rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1628 0%, #0d47a1 60%, #1976d2 100%);
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=60') center/cover;
+  opacity: 0.12;
+}
+.heroContent {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0.75rem 0 1rem;
+  line-height: 1.2;
+}
+.heroSub {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Facts bar */
+.factsBar {
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 2rem 0;
+}
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.factNum {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.factLabel { font-size: 0.85rem; color: #6b7280; font-weight: 500; }
+
+/* Sections */
+.section { padding: 5rem 0; }
+.lightBg { background: #f8fafc; }
+.sectionHeader { text-align: center; max-width: 700px; margin: 0 auto 3.5rem; }
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.valueCard {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.valueCard:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+.valueIcon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.valueTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.625rem;
+}
+.valueDesc { font-size: 0.875rem; color: #6b7280; line-height: 1.6; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #00bcd4, transparent);
+  transform: translateX(-50%);
+}
+.timelineItem {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.timelineItem.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 2rem);
+}
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px rgba(0,188,212,0.2);
+}
+.timelineCard {
+  background: white;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  max-width: 380px;
+}
+.timelineYear {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 0.375rem;
+}
+.timelineTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.4rem;
+}
+.timelineDesc { font-size: 0.875rem; color: #6b7280; line-height: 1.6; }
+
+/* Leadership */
+.leaderGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.leaderCard {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s;
+}
+.leaderCard:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.leaderImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid rgba(0,188,212,0.3);
+}
+.leaderName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+}
+.leaderRole {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+.leaderDesc { font-size: 0.8rem; color: #6b7280; line-height: 1.5; }
+
+/* Accreditations */
+.accredGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.accredCard {
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: transform 0.3s;
+}
+.accredCard:hover { transform: translateY(-4px); }
+.accredBadge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+.accredCountry { font-weight: 600; color: #1a1a2e; font-size: 0.875rem; margin-bottom: 0.25rem; }
+.accredType { font-size: 0.8rem; color: #6b7280; margin-bottom: 0.75rem; }
+.accredYear {
+  font-size: 0.75rem;
+  background: rgba(0,188,212,0.1);
+  color: #00bcd4;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+  .accredGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .timeline::before { left: 20px; }
+  .timelineItem { justify-content: flex-start; padding-right: 0; padding-left: 3.5rem; }
+  .timelineItem.right { padding-left: 3.5rem; }
+  .timelineDot { left: 20px; }
+  .leaderGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .facts { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .valuesGrid { grid-template-columns: 1fr 1fr; }
+  .accredGrid { grid-template-columns: 1fr 1fr; }
+}

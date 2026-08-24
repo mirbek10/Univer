@@ -1,0 +1,124 @@
+.hero {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(0,188,212,0.07) 0%, transparent 60%);
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0.5rem 0 1rem;
+}
+.heroSub {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.main { padding: 4rem 0 5rem; }
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.filtersLabel {
+  font-size: 0.85rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+.filterTabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.filterBtn:hover { border-color: rgba(0,188,212,0.5); color: #0f172a; }
+.filterActive {
+  background: rgba(0,188,212,0.08) !important;
+  border-color: rgba(0,188,212,0.5) !important;
+  color: #00838f !important;
+}
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.filterActive .filterCount { background: rgba(0,188,212,0.15); color: #00838f; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #94a3b8;
+  padding: 3rem;
+  font-size: 1rem;
+}
+
+.infoBar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+.infoItem strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+.infoItem span { font-size: 0.78rem; color: #94a3b8; }

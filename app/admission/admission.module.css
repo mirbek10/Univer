@@ -1,0 +1,121 @@
+.hero {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 60%, #f0f9ff 100%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 50%, rgba(25,118,210,0.08) 0%, transparent 60%);
+}
+.heroContent { position: relative; z-index: 1; padding: 0 2rem; }
+.heroTitle { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; margin: 0.5rem 0 1rem; }
+.heroSub { font-size: 1rem; color: #64748b; margin-bottom: 2.5rem; }
+
+.dates {
+  display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+  max-width: 900px; margin: 0 auto;
+}
+.dateCard {
+  background: #ffffff; border: 1px solid #e2e8f0;
+  border-radius: 14px; padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 0.25rem; min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.dateLabel { font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.dateValue { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; color: #0f172a; }
+
+.section { padding: 5rem 0; }
+.sectionDark { background: #f8fafc; }
+.sectionHeader { text-align: center; margin-bottom: 3.5rem; }
+
+/* Steps */
+.stepsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .stepsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .stepsGrid { grid-template-columns: 1fr; } }
+
+.stepCard {
+  background: #ffffff; border: 1px solid #e2e8f0;
+  border-radius: 20px; padding: 2rem; position: relative; overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.stepCard:hover { transform: translateY(-6px); border-color: rgba(0,188,212,0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.stepNum {
+  font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 900;
+  line-height: 1; margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgba(0,188,212,0.5), rgba(13,71,161,0.5));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stepTitle { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; font-size: 1rem; margin-bottom: 0.75rem; }
+.stepDesc { font-size: 0.84rem; color: #64748b; line-height: 1.6; }
+
+/* Scholarships */
+.scholarGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .scholarGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .scholarGrid { grid-template-columns: 1fr; } }
+
+.scholarCard {
+  background: #ffffff; border: 1px solid #e2e8f0;
+  border-radius: 20px; padding: 2rem; text-align: center;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.scholarCard:hover { transform: translateY(-6px); border-color: rgba(0,188,212,0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.scholarIcon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.scholarName { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; font-size: 0.95rem; margin-bottom: 0.75rem; }
+.scholarDesc { font-size: 0.83rem; color: #64748b; line-height: 1.6; }
+
+/* FAQ */
+.faq { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+.faqItem {
+  background: #ffffff; border: 1px solid #e2e8f0;
+  border-radius: 12px; overflow: hidden; transition: border-color 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.faqItem.faqOpen { border-color: rgba(0,188,212,0.4); }
+.faqBtn {
+  width: 100%; background: none; border: none; padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between; cursor: pointer;
+  color: #0f172a; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem;
+  text-align: left; gap: 1rem; transition: background 0.2s;
+}
+.faqBtn:hover { background: #f8fafc; }
+.faqIcon {
+  width: 24px; height: 24px; background: rgba(0,188,212,0.1);
+  border: 1px solid rgba(0,188,212,0.3); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: #00838f; flex-shrink: 0;
+}
+.faqContent {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 1.5rem;
+}
+.faqOpen .faqContent { max-height: 300px; padding: 0 1.5rem 1.5rem; }
+.faqContent p { font-size: 0.875rem; color: #64748b; line-height: 1.7; }
+
+/* CTA */
+.ctaSection {
+  padding: 6rem 0; text-align: center;
+  background: linear-gradient(135deg, #f0f7ff, #e8f4fd);
+  position: relative; overflow: hidden;
+}
+.ctaSection::before {
+  content: ''; position: absolute;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,188,212,0.08) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.ctaContent { position: relative; z-index: 1; max-width: 650px; margin: 0 auto; padding: 0 2rem; }
+.ctaTitle { font-family: 'Montserrat', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; color: #0f172a; margin-bottom: 1rem; }
+.ctaSub { font-size: 1rem; color: #64748b; line-height: 1.7; margin-bottom: 2.5rem; }
+.ctaActions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.ctaBtn {
+  padding: 1rem 2.5rem; background: linear-gradient(135deg, #00bcd4, #0d47a1); border: none; border-radius: 50px;
+  color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 8px 32px rgba(0,188,212,0.25);
+}
+.ctaBtn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0,188,212,0.4); }
+.ctaLink { display: flex; align-items: center; color: #475569; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.ctaLink:hover { color: #00838f; }

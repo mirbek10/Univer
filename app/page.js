@@ -1,69 +1,110 @@
-import Image from "next/image";
+'use client'
+import Hero from '@/widgets/Hero'
+import StatsSection from '@/features/stats-counter/ui/StatsSection'
+import FacultyCard from '@/entities/faculty/ui/FacultyCard'
+import NewsCard from '@/entities/news/ui/NewsCard'
+import GalleryGrid from '@/features/gallery/ui/GalleryGrid'
+import PartnersScroll from '@/entities/partner/ui/PartnersScroll'
+import Preloader from '@/shared/ui/Preloader'
+import CTASection from '@/app/_components/CTASection'
+import AboutPreview from '@/app/_components/AboutPreview'
+import { faculties } from '@/entities/faculty/model/faculties'
+import { news } from '@/entities/news/model/news'
+import { useI18n } from '@/shared/lib/useI18n'
 
-export default function Home() {
+const COPY = {
+  ru: {
+    facultiesLabel: 'Направления',
+    facultiesTitle: 'Наши факультеты',
+    facultiesSub: 'Выберите направление, которое откроет для вас новые горизонты',
+    allFaculties: 'Все факультеты →',
+    newsLabel: 'Актуально',
+    newsTitle: 'Новости университета',
+    allNews: 'Все новости →',
+  },
+  kg: {
+    facultiesLabel: 'Багыттар',
+    facultiesTitle: 'Биздин факультеттер',
+    facultiesSub: 'Сиз үчүн жаңы мүмкүнчүлүктөрдү ачкан багытты тандаңыз',
+    allFaculties: 'Бардык факультеттер →',
+    newsLabel: 'Жаңылыктар',
+    newsTitle: 'Университеттин жаңылыктары',
+    allNews: 'Бардык жаңылыктар →',
+  },
+  en: {
+    facultiesLabel: 'Directions',
+    facultiesTitle: 'Our Faculties',
+    facultiesSub: 'Choose a direction that opens new horizons for you',
+    allFaculties: 'All faculties →',
+    newsLabel: 'Latest',
+    newsTitle: 'University News',
+    allNews: 'All news →',
+  },
+}
+
+export default function HomePage() {
+  const { lang } = useI18n()
+  const c = COPY[lang] || COPY.ru
+  const topFaculties = faculties.slice(0, 6)
+  const latestNews = news.slice(0, 3)
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Preloader />
+      <Hero />
+      <AboutPreview />
+      <StatsSection />
+
+      <section style={{ padding: '5rem 0', background: '#f8fafc' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <p className="section-label">{c.facultiesLabel}</p>
+            <h2 className="section-title">{c.facultiesTitle}</h2>
+            <p className="section-sub" style={{ margin: '0 auto' }}>{c.facultiesSub}</p>
+          </div>
+          <div className="cards-grid">
+            {topFaculties.map((f) => (
+              <FacultyCard key={f.id} faculty={f} />
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="/faculties" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              padding: '0.875rem 2rem', borderRadius: '50px',
+              border: '1.5px solid #e2e8f0',
+              color: '#475569', textDecoration: 'none', fontWeight: 600,
+              fontSize: '0.9rem', transition: 'all 0.2s',
+              background: '#ffffff',
+            }}>
+              {c.allFaculties}
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <GalleryGrid />
+
+      <section style={{ padding: '5rem 0' }}>
+        <div className="container">
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
+            <div>
+              <p className="section-label">{c.newsLabel}</p>
+              <h2 className="section-title" style={{ marginBottom: 0 }}>{c.newsTitle}</h2>
+            </div>
+            <a href="/news" style={{ color: '#00bcd4', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+              {c.allNews}
+            </a>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            {latestNews.map((n) => (
+              <NewsCard key={n.id} article={n} />
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      <PartnersScroll />
+      <CTASection />
+    </>
+  )
 }

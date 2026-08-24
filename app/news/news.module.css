@@ -1,0 +1,40 @@
+.hero {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.heroContent { padding: 0 2rem; }
+.heroTitle { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; margin: 0.5rem 0 1rem; }
+.heroSub { font-size: 1rem; color: #64748b; }
+
+.main { padding: 4rem 0 5rem; }
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.tab {
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tab:hover { border-color: rgba(0,188,212,0.5); color: #0f172a; }
+.tabActive { background: rgba(0,188,212,0.08); border-color: rgba(0,188,212,0.5); color: #00838f; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+
+.empty { text-align: center; color: #94a3b8; padding: 4rem; font-size: 1rem; }
+
+.pagination { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 3rem; flex-wrap: wrap; }
+.pageBtn {
+  width: 42px; height: 42px; border-radius: 10px; border: 1px solid #e2e8f0;
+  background: #ffffff; color: #64748b; font-size: 0.875rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+}
+.pageBtn:hover:not(:disabled) { border-color: rgba(0,188,212,0.5); color: #0f172a; }
+.pageBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pageBtnActive { background: linear-gradient(135deg, #00bcd4, #0d47a1); border-color: transparent; color: #fff; }

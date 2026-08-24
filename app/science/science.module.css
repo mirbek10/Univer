@@ -1,0 +1,190 @@
+.hero {
+  position: relative;
+  padding: 6rem 0 5rem;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2a6e 50%, #0d47a1 100%);
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(0,188,212,0.15) 0%, transparent 60%);
+}
+.heroContent { position: relative; text-align: center; color: white; }
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0.75rem 0 1rem;
+}
+.heroSub { font-size: 1.05rem; opacity: 0.85; margin-bottom: 2.5rem; }
+.heroStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.heroStat { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.heroStat strong { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: #00bcd4; }
+.heroStat span { font-size: 0.8rem; opacity: 0.75; }
+.heroStatDiv { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+
+/* Tabs */
+.tabNav { background: white; border-bottom: 1px solid rgba(0,0,0,0.07); padding: 1rem 0; position: sticky; top: 72px; z-index: 10; }
+.tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.content { padding: 4rem 0; }
+
+/* Research areas */
+.areasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.areaCard {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.areaCard:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+.areaIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.areaTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.625rem;
+}
+.areaDesc { font-size: 0.875rem; color: #6b7280; line-height: 1.65; margin-bottom: 1rem; }
+.areaProjects {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #00bcd4;
+  background: rgba(0,188,212,0.1);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* Labs */
+.labsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.labCard {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s;
+}
+.labCard:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.08); }
+.labIcon { font-size: 2rem; flex-shrink: 0; }
+.labName { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.3rem; }
+.labFaculty { font-size: 0.8rem; color: #00bcd4; font-weight: 600; margin-bottom: 0.4rem; }
+.labEquipment { font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem; line-height: 1.5; }
+.labStaff { font-size: 0.78rem; color: #9ca3af; }
+
+/* Conferences */
+.confWrapper {}
+.confSection { }
+.confSectionTitle { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 1rem; }
+.confItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 0.75rem;
+  border: 1px solid;
+  flex-wrap: wrap;
+}
+.upcoming { background: #f0fafb; border-color: rgba(0,188,212,0.2); }
+.past { background: #f8fafc; border-color: rgba(0,0,0,0.07); opacity: 0.8; }
+.confTitle { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 600; color: #1a1a2e; margin-bottom: 0.25rem; }
+.confMeta { font-size: 0.8rem; color: #6b7280; }
+.confBtn {
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: box-shadow 0.2s;
+}
+.confBtn:hover { box-shadow: 0 6px 20px rgba(0,188,212,0.4); }
+.confPastBadge {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  background: #f1f5f9;
+  padding: 0.3rem 0.875rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+/* Grants */
+.grantsIntro { color: #6b7280; margin-bottom: 2rem; font-size: 1rem; line-height: 1.7; max-width: 700px; }
+.grantsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.grantCard {
+  background: white;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.grantCard:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+.grantAmount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.grantName { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; color: #1a1a2e; }
+.grantArea { font-size: 0.8rem; color: #6b7280; }
+.grantDeadline { font-size: 0.78rem; color: #f59e0b; font-weight: 600; margin-top: 0.25rem; }
+.grantBtn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.grantBtn:hover { box-shadow: 0 6px 20px rgba(0,188,212,0.4); }
+
+@media (max-width: 1024px) {
+  .areasGrid { grid-template-columns: repeat(2, 1fr); }
+  .grantsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .areasGrid { grid-template-columns: 1fr; }
+  .labsGrid { grid-template-columns: 1fr; }
+  .heroStats { gap: 1.25rem; }
+  .heroStatDiv { display: none; }
+}
+@media (max-width: 480px) {
+  .grantsGrid { grid-template-columns: 1fr; }
+}

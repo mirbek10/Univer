@@ -1,0 +1,61 @@
+.hero { background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%); padding: 5rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.07); }
+.heroContent { padding: 0 2rem; }
+.heroTitle { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: #0f172a; margin: 0.5rem 0 1rem; }
+.heroSub { font-size: 1rem; color: #64748b; margin-bottom: 2.5rem; }
+.heroStats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.heroStats div { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.heroStats strong { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 900; background: linear-gradient(135deg, #00acc1, #1565c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.heroStats span { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.section { padding: 5rem 0; }
+.sectionDark { background: #f8fafc; }
+.sectionHeader { text-align: center; margin-bottom: 3.5rem; }
+
+.programsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+@media (max-width: 700px) { .programsGrid { grid-template-columns: 1fr; } }
+
+.programCard { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 2rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.programCard:hover { transform: translateY(-6px); border-color: rgba(0,188,212,0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.programHeader { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.programIcon { font-size: 2rem; }
+.programName { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0f172a; font-size: 1.2rem; }
+.programDesc { font-size: 0.875rem; color: #64748b; line-height: 1.6; margin-bottom: 1.5rem; }
+.programMeta { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 1.25rem; border-top: 1px solid #f1f5f9; }
+.programMeta div { display: flex; flex-direction: column; gap: 0.2rem; }
+.metaLabel { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.metaVal { font-size: 0.83rem; color: #475569; }
+.metaDeadline { font-size: 0.83rem; color: #00838f; font-weight: 600; }
+
+.uniGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .uniGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .uniGrid { grid-template-columns: 1fr; } }
+
+.uniCard { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.75rem; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.uniCard:hover { transform: translateY(-6px); border-color: rgba(0,188,212,0.4); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.uniFlag { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+.uniName { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; font-size: 0.9rem; margin-bottom: 0.25rem; line-height: 1.3; }
+.uniCountry { font-size: 0.78rem; color: #00838f; font-weight: 600; margin-bottom: 0.25rem; }
+.uniSince { font-size: 0.72rem; color: #94a3b8; margin-bottom: 0.875rem; }
+.uniPrograms { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.uniProgramTag { font-size: 0.65rem; background: #f1f5f9; border: 1px solid #e2e8f0; color: #64748b; padding: 0.2rem 0.5rem; border-radius: 50px; }
+
+.processGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .processGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .processGrid { grid-template-columns: 1fr; } }
+
+.processCard { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 2rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.processCard:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.processStep { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 900; display: block; margin-bottom: 1rem; background: linear-gradient(135deg, rgba(0,188,212,0.6), rgba(13,71,161,0.6)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.processTitle { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; font-size: 0.95rem; margin-bottom: 0.75rem; }
+.processDesc { font-size: 0.83rem; color: #64748b; line-height: 1.6; }
+
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; } }
+
+.testimonialCard { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.testimonialText { font-size: 0.875rem; color: #475569; line-height: 1.7; font-style: italic; flex: 1; }
+.testimonialAuthor { display: flex; align-items: center; gap: 1rem; }
+.testimonialImg { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.testimonialName { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; font-size: 0.88rem; display: block; }
+.testimonialProgram { font-size: 0.72rem; color: #00838f; }
+.testimonialFaculty { font-size: 0.7rem; color: #94a3b8; }

@@ -1,0 +1,293 @@
+/* ── Step Indicator ── */
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 1.75rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.stepGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.stepDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.stepDot.active {
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  border-color: #00bcd4;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0,188,212,0.3);
+}
+.stepDot.done {
+  background: rgba(0,188,212,0.12);
+  border-color: rgba(0,188,212,0.5);
+  color: #00838f;
+}
+
+.stepLabel {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  transition: color 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.activeLabel { color: #00838f; font-weight: 600; }
+
+.stepLine {
+  width: 32px;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 0.2rem;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+.doneLine { background: rgba(0,188,212,0.5); }
+
+/* ── Step body ── */
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.stepTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem;
+}
+
+/* ── Fields ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+}
+.req { color: #f44336; }
+
+.input, .textarea {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.7rem 0.875rem;
+  color: #0f172a;
+  font-size: 0.875rem;
+  font-family: 'Open Sans', sans-serif;
+  transition: border-color 0.2s, background 0.2s;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+  background: #ffffff;
+}
+.inputError { border-color: #f44336; }
+
+.error {
+  font-size: 0.72rem;
+  color: #f44336;
+}
+
+/* ── Radio cards ── */
+.radioGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.radioCard {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.875rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.82rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+.radioCard input { display: none; }
+.radioCard:hover { border-color: rgba(0,188,212,0.5); color: #0f172a; background: #e0f7fa; }
+.radioCardActive { border-color: #00bcd4; background: rgba(0,188,212,0.08); color: #00838f; font-weight: 600; }
+.radioIcon { font-size: 0.95rem; }
+
+/* ── Faculty grid ── */
+.facultyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.facultyCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.55rem 0.4rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #64748b;
+  transition: all 0.2s;
+  line-height: 1.3;
+}
+.facultyCard input { display: none; }
+.facultyCard:hover { border-color: rgba(0,188,212,0.5); color: #0f172a; background: #e0f7fa; }
+.facultyActive { border-color: #00bcd4; background: rgba(0,188,212,0.08); color: #00838f; font-weight: 600; }
+
+/* ── Summary ── */
+.summaryBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.875rem 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.83rem;
+}
+.summaryRow span { color: #64748b; white-space: nowrap; }
+.summaryRow strong { color: #0f172a; text-align: right; }
+
+/* ── Checkboxes ── */
+.checkLabel {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.83rem;
+  color: #64748b;
+  flex-direction: row !important;
+  line-height: 1.4;
+}
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #00bcd4;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Action buttons ── */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btnBack {
+  padding: 0.7rem 1.25rem;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btnBack:hover { background: #e2e8f0; color: #0f172a; }
+
+.btnNext {
+  flex: 1;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #00bcd4, #0d47a1);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  white-space: nowrap;
+}
+.btnNext:hover { box-shadow: 0 6px 24px rgba(0,188,212,0.35); }
+
+.btnSubmit {
+  flex: 1;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  white-space: nowrap;
+}
+.btnSubmit:hover { box-shadow: 0 6px 24px rgba(76,175,80,0.4); }
+
+/* ══════════════════════════════
+   Mobile overrides
+   ══════════════════════════════ */
+@media (max-width: 600px) {
+  .stepLabel { display: none; }      /* hide labels, keep dots + lines */
+  .stepLine  { width: 24px; }
+  .stepDot   { width: 30px; height: 30px; font-size: 0.75rem; }
+
+  .row { grid-template-columns: 1fr; gap: 0.875rem; }
+
+  .facultyGrid { grid-template-columns: repeat(2, 1fr); }
+
+  .actions {
+    flex-direction: column-reverse;
+    gap: 0.6rem;
+  }
+  .btnBack  { width: 100%; text-align: center; }
+  .btnNext  { width: 100%; }
+  .btnSubmit { width: 100%; }
+}

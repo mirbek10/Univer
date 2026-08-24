@@ -1,0 +1,179 @@
+.section {
+  padding: 5rem 0;
+  background: #f8fafc; /* Светлый чистый фон вместо полупрозрачного тёмного */
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00838f; /* Сделан более тёмным для контраста на светлом фоне */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a; /* Тёмно-синий/почти чёрный вместо белого */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #475569; /* Контрастный серый цвет */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; } }
+@media (max-width: 480px)  { .grid { grid-template-columns: 1fr; grid-auto-rows: 200px; } }
+
+.cell {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Легкая тень для ячеек */
+}
+
+.wide { grid-column: span 2; }
+.tall { grid-row: span 2; }
+@media (max-width: 480px) { .wide, .tall { grid-column: span 1; grid-row: span 1; } }
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.cell:hover .img { transform: scale(1.08); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65); /* Тёмная плашка при наведении сохранена для хорошей видимости иконки поверх фото */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cell:hover .overlay { opacity: 1; }
+
+.zoomIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.altText {
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lightboxImgWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.lightboxImg {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.lightboxCaption {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+/* Bottom nav row — hidden on desktop, shown on mobile */
+.lightboxNav {
+  display: none;
+}
+
+.navBtn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0f172a;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.navBtn:hover {
+  background: #e0f7fa;
+  border-color: #00bcd4;
+  color: #00838f;
+}
+
+/* Mobile lightbox: nav buttons below image */
+@media (max-width: 600px) {
+  .lightbox {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .lightboxImg {
+    max-height: 50vh;
+    border-radius: 8px;
+  }
+  .lightboxNav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  /* hide side navBtns on mobile, show bottom row instead */
+  .lightbox > .navBtn {
+    display: none;
+  }
+}
