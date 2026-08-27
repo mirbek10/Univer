@@ -2,8 +2,8 @@ import { defaultLang, translations } from '@/shared/lib/i18n/translations'
 
 const siteConfigByLang = {
   ru: {
-    name: 'КГУ',
-    fullName: 'Кыргызский государственный университет',
+    name: 'КММУ',
+    fullName: 'Кыргызский международный медицинский университет',
     shortDesc: 'Ведущий вуз Центральной Азии с 1932 года',
     address: 'г. Бишкек, ул. Киевская 96, 720001',
     phone: ['+996 (312) 32 45 11', '+996 (312) 32 45 12'],
@@ -24,8 +24,8 @@ const siteConfigByLang = {
     ],
   },
   kg: {
-    name: 'КМУ',
-    fullName: 'Кыргыз мамлекеттик университети',
+    name: 'КММУ',
+    fullName: 'Кыргызский эл аралык медицина университети',
     shortDesc: '1932-жылдан берки Борбор Азиянын алдыңкы жогорку окуу жайы',
     address: 'Бишкек ш., Киевская к. 96, 720001',
     phone: ['+996 (312) 32 45 11', '+996 (312) 32 45 12'],
@@ -46,8 +46,8 @@ const siteConfigByLang = {
     ],
   },
   en: {
-    name: 'KSU',
-    fullName: 'Kyrgyz State University',
+    name: 'KMMU',
+    fullName: 'Kyrgyz International Medical University',
     shortDesc: 'A leading university in Central Asia since 1932',
     address: 'Bishkek, 96 Kievskaya St., 720001',
     phone: ['+996 (312) 32 45 11', '+996 (312) 32 45 12'],

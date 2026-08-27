@@ -97,19 +97,19 @@ const PROGRAMS = {
 const PROCESS = {
   ru: [
     { step: '01', title: 'Выберите программу', desc: 'Изучите доступные программы обмена и требования.' },
-    { step: '02', title: 'Подайте заявку в КГУ', desc: 'Заполните заявку в международном отделе и получите одобрение.' },
+    { step: '02', title: 'Подайте заявку в КММУ', desc: 'Заполните заявку в международном отделе и получите одобрение.' },
     { step: '03', title: 'Подготовьте документы', desc: 'Соберите сертификаты, рекомендательные письма и необходимые формы.' },
     { step: '04', title: 'Отправьтесь в принимающий вуз', desc: 'Завершите подачу документов в университет-партнёр.' },
   ],
   kg: [
     { step: '01', title: 'Программаны тандаңыз', desc: 'Жеткиликтүү алмашуу программаларын жана талаптарын изилдеңиз.' },
-    { step: '02', title: 'КМУга арыз бериңиз', desc: 'Эл аралык бөлүмдө арызды толтуруп, жактырылууну алыңыз.' },
+    { step: '02', title: 'КММУга арыз бериңиз', desc: 'Эл аралык бөлүмдө арызды толтуруп, жактырылууну алыңыз.' },
     { step: '03', title: 'Документтерди даярдаңыз', desc: 'Сертификаттарды, сунуш каттарды жана керектүү формаларды топтоңуз.' },
     { step: '04', title: 'Кабыл алган ЖОЖго жөнөңүз', desc: 'Документтерди өнөктөш университетке тапшырууну аяктаңыз.' },
   ],
   en: [
     { step: '01', title: 'Choose a program', desc: 'Review available exchange programs and requirements.' },
-    { step: '02', title: 'Apply to KSU', desc: 'Fill out the application with the international office and get approval.' },
+    { step: '02', title: 'Apply to KMMU', desc: 'Fill out the application with the international office and get approval.' },
     { step: '03', title: 'Prepare documents', desc: 'Collect certificates, recommendation letters and required forms.' },
     { step: '04', title: 'Go to the host university', desc: 'Complete the submission to the partner university.' },
   ],

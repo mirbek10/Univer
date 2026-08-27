@@ -12,7 +12,7 @@ const COPY = {
     prev: 'Предыдущее',
     next: 'Следующее',
     images: [
-      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'Главный корпус КГУ', span: 'wide' },
+      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'Главный корпус КММУ', span: 'wide' },
       { id: 2, src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80', alt: 'Студенты в библиотеке' },
       { id: 3, src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80', alt: 'Торжественная церемония' },
       { id: 4, src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80', alt: 'Учебный класс', span: 'tall' },
@@ -29,7 +29,7 @@ const COPY = {
     prev: 'Мурунку',
     next: 'Кийинки',
     images: [
-      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'КМУнун башкы корпусу', span: 'wide' },
+      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'КММУнун башкы корпусу', span: 'wide' },
       { id: 2, src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80', alt: 'Китепканадагы студенттер' },
       { id: 3, src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80', alt: 'Салтанаттуу азем' },
       { id: 4, src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80', alt: 'Окуу классы', span: 'tall' },
@@ -46,7 +46,7 @@ const COPY = {
     prev: 'Previous',
     next: 'Next',
     images: [
-      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'Main building of KSU', span: 'wide' },
+      { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80', alt: 'Main building of KMMU', span: 'wide' },
       { id: 2, src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80', alt: 'Students in the library' },
       { id: 3, src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80', alt: 'Graduation ceremony' },
       { id: 4, src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80', alt: 'Classroom', span: 'tall' },

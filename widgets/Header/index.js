@@ -8,6 +8,7 @@ import { useModal } from '@/shared/lib/useModal'
 import { useI18n } from '@/shared/lib/useI18n'
 import ApplyModal from '@/features/apply-modal/ui/ApplyModal'
 import { Menu, X, Languages, MapPin, Mail } from 'lucide-react'
+import Logo from './Logo'
 import styles from './Header.module.css'
 
 const LANGS = [
@@ -43,10 +44,10 @@ export default function Header() {
 
   const universityName =
     currentLang === 'kg'
-      ? 'Кыргыз мамлекеттик университети'
+      ? 'Кыргызский эл аралык медицина университети'
       : currentLang === 'en'
-        ? 'Kyrgyz State University'
-        : 'Кыргызский государственный университет'
+        ? 'Kyrgyz International Medical University'
+        : 'Кыргызский международный медицинский университет'
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50)
@@ -104,7 +105,7 @@ export default function Header() {
 
         <div className={styles.inner}>
           <Link href="/" className={styles.logo}>
-            <div className={styles.logoBox}>{siteConfig.name}</div>
+            <Logo size={42} />
             <div className={styles.logoText}>
               <span className={styles.logoMain}>{siteConfig.name}</span>
               <span className={styles.logoSub}>{universityName}</span>

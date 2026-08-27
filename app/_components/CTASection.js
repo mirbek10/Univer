@@ -6,9 +6,9 @@ import styles from './CTASection.module.css'
 
 const COPY = {
   ru: {
-    label: 'Поступи в КГУ',
-    title: 'Готов начать своё академическое путешествие?',
-    sub: 'Подай документы уже сейчас и стань частью семьи КГУ. Приём заявок открыт до 31 июля 2026.',
+    label: 'Поступи в КММУ',
+    title: 'Готов начать карьеру в медицине?',
+    sub: 'Подай документы уже сейчас и стань частью семьи КММУ. Приём заявок открыт до 15 августа 2026.',
     btn: 'Подать заявку сейчас',
     secondary: 'Условия поступления',
     badge1: 'Бесплатно и без обязательств',
@@ -16,9 +16,9 @@ const COPY = {
     badge3: 'Международная аккредитация',
   },
   kg: {
-    label: 'КМУга тапшырыңыз',
-    title: 'Академиялык жолуңузду баштоого даярсызбы?',
-    sub: 'Азыр эле документтериңизди тапшырып, КМУ үй-бүлөсүнүн бир бөлүгү болуңуз. Өтүнмөлөр 2026-жылдын 31-июлуна чейин ачык.',
+    label: 'КММУга тапшырыңыз',
+    title: 'Медициналык карьераны баштоого даярсызбы?',
+    sub: 'Азыр эле документтериңизди тапшырып, КММУ үй-бүлөсүнүн бир бөлүгү болуңуз. Өтүнмөлөр 2026-жылдын 15-августуна чейин ачык.',
     btn: 'Азыр тапшыруу',
     secondary: 'Кабыл алуу шарттары',
     badge1: 'Акысыз жана милдеттенмесиз',
@@ -26,9 +26,9 @@ const COPY = {
     badge3: 'Эл аралык аккредитация',
   },
   en: {
-    label: 'Apply to KSU',
-    title: 'Ready to start your academic journey?',
-    sub: 'Submit your documents now and become part of the KSU family. Applications are open until July 31, 2026.',
+    label: 'Apply to KMMU',
+    title: 'Ready to start your medical career?',
+    sub: 'Submit your documents now and become part of the KMMU family. Applications are open until August 15, 2026.',
     btn: 'Apply now',
     secondary: 'Admission requirements',
     badge1: 'Free and non-binding',

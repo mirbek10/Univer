@@ -49,68 +49,48 @@ const COPY = {
 }
 
 const FACULTY_COPY = {
-  economics: {
-    ru: { name: 'Экономический факультет', badge: 'Популярное', description: 'Финансы, бухгалтерский учёт, мировая экономика и цифровой бизнес.', about: 'Экономический факультет КГУ готовит специалистов для банков, бизнеса и государственного сектора.', contact: 'Декан: Асанов Бакыт Нурланович' },
-    kg: { name: 'Экономика факультети', badge: 'Атактуу', description: 'Каржы, бухгалтердик эсеп, дүйнөлүк экономика жана санарип бизнес.', about: 'КМУнун экономика факультети банктар, бизнес жана мамлекеттик сектор үчүн адистерди даярдайт.', contact: 'Декан: Асанов Бакыт Нурланович' },
-    en: { name: 'Faculty of Economics', badge: 'Popular', description: 'Finance, accounting, global economics and digital business.', about: 'KSU Faculty of Economics prepares specialists for banks, business and the public sector.', contact: 'Dean: Asanov Bakyt Nurlanovich' },
+  stomatology: {
+    ru: { name: 'Факультет стоматологии', badge: null, description: 'Стоматология, ортодонтия, челюстно-лицевая хирургия.', about: 'Современная стоматологическая клиника и практика с первого курса.', contact: 'Декан: Абдыкалыкова Айгуль Бактыбековна' },
+    kg: { name: 'Стоматология факультети', badge: null, description: 'Стоматология, ортодонтия, челюст-бет хирургиясы.', about: 'Заманбап стоматология клиникасы жана биринчи курстан практика.', contact: 'Декан: Абдыкалыкова Айгуль Бактыбековна' },
+    en: { name: 'Faculty of Stomatology', badge: null, description: 'Dentistry, orthodontics and maxillofacial surgery.', about: 'Modern dental clinic and practice from the first year.', contact: 'Dean: Abdykalykova Aigul Baktybekovna' },
   },
-  medicine: {
-    ru: { name: 'Медицинский факультет', badge: null, description: 'Лечебное дело, стоматология, фармация.', about: 'Современная клиническая база и практика в ведущих больницах страны.', contact: 'Декан: Джумалиева Нурзат Асановна' },
-    kg: { name: 'Медицина факультети', badge: null, description: 'Дарылоо иши, стоматология, фармация.', about: 'Заманбап клиникалык база жана өлкөнүн алдыңкы ооруканаларында практика.', contact: 'Декан: Джумалиева Нурзат Асановна' },
-    en: { name: 'Faculty of Medicine', badge: null, description: 'General medicine, dentistry and pharmacy.', about: 'Modern clinical base and practice in the country\'s leading hospitals.', contact: 'Dean: Jumalieva Nurzat Asanovna' },
+  lechebnoe: {
+    ru: { name: 'Факультет лечебного дела', badge: 'Популярное', description: 'Терапия, хирургия, внутренние болезни.', about: 'Клинические базы в ведущих больницах Бишкека.', contact: 'Декан: Джумалиева Нурзат Асановна' },
+    kg: { name: 'Дарылоо иши факультети', badge: 'Атактуу', description: 'Терапия, хирургия, ички оорулар.', about: 'Бишкектин алдыңкы ооруканаларында клиникалык базалар.', contact: 'Декан: Джумалиева Нурзат Асановна' },
+    en: { name: 'Faculty of General Medicine', badge: 'Popular', description: 'Therapy, surgery and internal medicine.', about: 'Clinical bases in leading hospitals of Bishkek.', contact: 'Dean: Jumalieva Nurzat Asanovna' },
   },
-  it: {
-    ru: { name: 'Факультет IT и программирования', badge: 'IT', description: 'Искусственный интеллект, кибербезопасность, разработка ПО.', about: 'Быстроразвивающийся факультет с партнёрством с Google, Microsoft и Yandex.', contact: 'Декан: Токтосунов Марат Бекович' },
-    kg: { name: 'IT жана программалоо факультети', badge: 'IT', description: 'Жасалма интеллект, киберкоопсуздук, программалык камсыздоо.', about: 'Google, Microsoft жана Yandex менен кызматташа турган эң ылдам өнүгүп жаткан факультет.', contact: 'Декан: Токтосунов Марат Бекович' },
-    en: { name: 'Faculty of IT and Programming', badge: 'IT', description: 'Artificial intelligence, cybersecurity and software development.', about: 'A fast-growing faculty in partnership with Google, Microsoft and Yandex.', contact: 'Dean: Toktosunov Marat Bekovich' },
+  pharmacy: {
+    ru: { name: 'Факультет фармации', badge: null, description: 'Фармация, клиническая фармация, фармакоэкономика.', about: 'Современные лаборатории и партнёрство с фармацевтическими компаниями.', contact: 'Декан: Байгазиев Айбек Маратович' },
+    kg: { name: 'Фармация факультети', badge: null, description: 'Фармация, клиникалык фармация, фармакоэкономика.', about: 'Заманбап лабораториялар жана фармацевтикалык компаниялар менен өнөктөштүк.', contact: 'Декан: Байгазиев Айбек Маратович' },
+    en: { name: 'Faculty of Pharmacy', badge: null, description: 'Pharmacy, clinical pharmacy and pharmacoeconomics.', about: 'Modern laboratories and partnerships with pharmaceutical companies.', contact: 'Dean: Baigaziev Aibek Maratovich' },
   },
-  pedagogy: {
-    ru: { name: 'Педагогический факультет', badge: null, description: 'Начальное, среднее и дополнительное образование.', about: 'Лидер в подготовке учителей для школ Кыргызстана.', contact: 'Декан: Исматов Кубаныч Алиевич' },
-    kg: { name: 'Педагогика факультети', badge: null, description: 'Башталгыч, орто жана кошумча билим берүү.', about: 'Кыргызстандын мектептери үчүн мугалимдерди даярдоодогу лидер.', contact: 'Декан: Исматов Кубаныч Алиевич' },
-    en: { name: 'Faculty of Pedagogy', badge: null, description: 'Primary, secondary and additional education.', about: 'A leader in training teachers for schools across Kyrgyzstan.', contact: 'Dean: Ismatov Kubanych Alievich' },
-  },
-  engineering: {
-    ru: { name: 'Инженерный факультет', badge: null, description: 'Строительство, энергетика, автоматизация.', about: 'Готовим специалистов для строительной отрасли, энергетики и промышленности.', contact: 'Декан: Бейшенов Азиз Тилекович' },
-    kg: { name: 'Инженердик факультет', badge: null, description: 'Курулуш, энергетика, автоматташтыруу.', about: 'Курулуш тармагы, энергетика жана өнөр жай үчүн адистерди даярдайбыз.', contact: 'Декан: Бейшенов Азиз Тилекович' },
-    en: { name: 'Faculty of Engineering', badge: null, description: 'Construction, energy and automation.', about: 'We train specialists for construction, energy and industry.', contact: 'Dean: Beyshenov Aziz Tilekovich' },
-  },
-  law: {
-    ru: { name: 'Юридический факультет', badge: null, description: 'Гражданское, уголовное и международное право.', about: 'Кузница правовых кадров Кыргызстана.', contact: 'Декан: Мамытова Айгуль Сейтбековна' },
-    kg: { name: 'Юридикалык факультет', badge: null, description: 'Жарандык, кылмыш жана эл аралык укук.', about: 'Кыргызстандын укук кадрларын даярдоочу мектеп.', contact: 'Декан: Мамытова Айгуль Сейтбековна' },
-    en: { name: 'Faculty of Law', badge: null, description: 'Civil, criminal and international law.', about: 'A forge of legal professionals for Kyrgyzstan.', contact: 'Dean: Mamytova Aigul Seitbekovna' },
+  pediatrics: {
+    ru: { name: 'Факультет педиатрии', badge: null, description: 'Педиатрия, детская хирургия, неонатология.', about: 'Углублённая подготовка по работе с детьми всех возрастов.', contact: 'Декан: Токтоболотова Мира Кыдырбековна' },
+    kg: { name: 'Педиатрия факультети', badge: null, description: 'Педиатрия, балдар хирургиясы, неонатология.', about: 'Бардык курактагы балдар менен иштөө боюнча терең даярдык.', contact: 'Декан: Токтоболотова Мира Кыдырбековна' },
+    en: { name: 'Faculty of Pediatrics', badge: null, description: 'Pediatrics, pediatric surgery and neonatology.', about: 'In-depth training for working with children of all ages.', contact: 'Dean: Toktobolotova Mira Kydyrbekovna' },
   },
 }
 
 const PROFESSORS = {
-  economics: [
-    { name: 'Асанов Бакыт Нурланович', title: 'Декан', subject: 'Макроэкономика', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
-    { name: 'Бакытбекова Айгуль', title: 'Профессор', subject: 'Финансы и кредит', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
-    { name: 'Дуйшенбеков Марат', title: 'Доцент', subject: 'Менеджмент', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
+  stomatology: [
+    { name: 'Абдыкалыкова Айгуль', title: 'Декан', subject: 'Стоматология', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80' },
+    { name: 'Алимов Айбек', title: 'Профессор', subject: 'Хирургия полости рта', img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80' },
+    { name: 'Кенжебаева Гульнара', title: 'Доцент', subject: 'Ортодонтия', img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80' },
   ],
-  medicine: [
-    { name: 'Джумалиева Нурзат', title: 'Декан', subject: 'Педиатрия', img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80' },
+  lechebnoe: [
+    { name: 'Джумалиева Нурзат', title: 'Декан', subject: 'Терапия', img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80' },
     { name: 'Алимов Айбек', title: 'Профессор', subject: 'Хирургия', img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80' },
     { name: 'Кенжебаева Гульнара', title: 'Доцент', subject: 'Фармакология', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80' },
   ],
-  it: [
-    { name: 'Токтосунов Марат', title: 'Декан', subject: 'Алгоритмы и структуры', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80' },
-    { name: 'Эшматов Данияр', title: 'Профессор', subject: 'Искусственный интеллект', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80' },
-    { name: 'Сейткалиева Инара', title: 'Доцент', subject: 'Кибербезопасность', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
+  pharmacy: [
+    { name: 'Байгазиев Айбек', title: 'Декан', subject: 'Фармацевтическая химия', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80' },
+    { name: 'Эшматов Данияр', title: 'Профессор', subject: 'Фармакоэкономика', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80' },
+    { name: 'Сейткалиева Инара', title: 'Доцент', subject: 'Клиническая фармация', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
   ],
-  pedagogy: [
-    { name: 'Исматов Кубаныч', title: 'Декан', subject: 'Педагогика', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
-    { name: 'Мамытова Айгуль', title: 'Профессор', subject: 'Методика обучения', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
-    { name: 'Бакиров Нурлан', title: 'Доцент', subject: 'Психология', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
-  ],
-  engineering: [
-    { name: 'Бейшенов Азиз', title: 'Декан', subject: 'Строительные конструкции', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
-    { name: 'Осмонов Тилек', title: 'Профессор', subject: 'Энергетика', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
-    { name: 'Карабекова Зинат', title: 'Доцент', subject: 'Экология', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
-  ],
-  law: [
-    { name: 'Мамытова Айгуль', title: 'Декан', subject: 'Конституционное право', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
-    { name: 'Кадыров Максат', title: 'Профессор', subject: 'Уголовное право', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
-    { name: 'Сулайманов Искен', title: 'Доцент', subject: 'Международное право', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
+  pediatrics: [
+    { name: 'Токтоболотова Мира', title: 'Декан', subject: 'Педиатрия', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
+    { name: 'Кадыров Максат', title: 'Профессор', subject: 'Детская хирургия', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
+    { name: 'Сулайманов Искен', title: 'Доцент', subject: 'Неонатология', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80' },
   ],
 }
 

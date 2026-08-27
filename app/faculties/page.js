@@ -8,8 +8,8 @@ import styles from './faculties.module.css'
 const COPY = {
   ru: {
     label: 'Образование',
-    title: 'Факультеты КГУ',
-    sub: '6 факультетов · 65+ образовательных программ · Бакалавриат, магистратура, докторантура',
+    title: 'Факультеты КММУ',
+    sub: '4 факультета · 17 образовательных программ · Специалитет, интернатура, магистратура',
     filters: 'Фильтр по направлению:',
     empty: 'Факультеты по выбранному фильтру не найдены',
     infoPrograms: 'образовательных программ',
@@ -21,8 +21,8 @@ const COPY = {
   },
   kg: {
     label: 'Билим берүү',
-    title: 'КМУнун факультеттери',
-    sub: '6 факультет · 65тен ашык билим берүү программасы · Бакалавриат, магистратура, докторантура',
+    title: 'КММУнун факультеттери',
+    sub: '4 факультет · 17 билим берүү программасы · Специалитет, интернатура, магистратура',
     filters: 'Багыты боюнча чыпка:',
     empty: 'Тандалган чыпка боюнча факультеттер табылган жок',
     infoPrograms: 'билим берүү программалары',
@@ -34,8 +34,8 @@ const COPY = {
   },
   en: {
     label: 'Education',
-    title: 'KSU Faculties',
-    sub: '6 faculties · 65+ educational programs · Bachelor, Master, Doctoral',
+    title: 'KMMU Faculties',
+    sub: '4 faculties · 17 educational programs · Speciality, Internship, Master',
     filters: 'Filter by direction:',
     empty: 'No faculties found for the selected filter',
     infoPrograms: 'educational programs',
@@ -55,9 +55,9 @@ export default function FacultiesPage() {
   const filtered = active === 'all' ? faculties : faculties.filter((f) => f.category === active)
 
   const filterLabels = {
-    ru: { all: 'Все', technical: 'Технические', social: 'Социальные', natural: 'Естественные', humanities: 'Гуманитарные' },
-    kg: { all: 'Баары', technical: 'Техникалык', social: 'Коомдук', natural: 'Жаратылыш', humanities: 'Гуманитардык' },
-    en: { all: 'All', technical: 'Technical', social: 'Social', natural: 'Natural Sciences', humanities: 'Humanities' },
+    ru: { all: 'Все', medical: 'Медицинские' },
+    kg: { all: 'Баары', medical: 'Медициналык' },
+    en: { all: 'All', medical: 'Medical' },
   }[lang] || {}
 
   return (

@@ -15,7 +15,7 @@ export default function Preloader() {
 
   return (
     <div className={styles.preloader}>
-      <div className={styles.logo}>КГУ</div>
+      <div className={styles.logo}>КММУ</div>
       <div className={styles.spinner} />
       <p className={styles.text}>ЗАГРУЗКА...</p>
     </div>

@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useI18n } from '@/shared/lib/useI18n'
 import { getSiteConfig, getFooterLinks } from '@/shared/config/site'
+import Logo from '@/widgets/Header/Logo'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -21,7 +22,7 @@ export default function Footer() {
           {/* ── Brand ── */}
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <div className={styles.logoBox}>{siteConfig.name}</div>
+              <Logo size={40} />
               <div>
                 <div className={styles.logoName}>{siteConfig.name}</div>
                 <div className={styles.logoFull}>{siteConfig.fullName}</div>

@@ -10,35 +10,25 @@ const COPY = {
 }
 
 const FACULTY_COPY = {
-  economics: {
-    ru: { name: 'Экономический факультет', description: 'Финансы, бухгалтерский учёт, мировая экономика и цифровой бизнес.', badge: 'Популярное' },
-    kg: { name: 'Экономика факультети', description: 'Каржы, бухгалтердик эсеп, дүйнөлүк экономика жана санарип бизнес.', badge: 'Атактуу' },
-    en: { name: 'Faculty of Economics', description: 'Finance, accounting, global economics and digital business.', badge: 'Popular' },
+  stomatology: {
+    ru: { name: 'Факультет стоматологии', description: 'Стоматология, ортодонтия, челюстно-лицевая хирургия. Современные клиники и практика с первого курса.', badge: null },
+    kg: { name: 'Стоматология факультети', description: 'Стоматология, ортодонтия, челюст-бет хирургиясы. Заманбап клиникалар жана биринчи курстан практика.', badge: null },
+    en: { name: 'Faculty of Stomatology', description: 'Dentistry, orthodontics and maxillofacial surgery. Modern clinics and practice from the first year.', badge: null },
   },
-  medicine: {
-    ru: { name: 'Медицинский факультет', description: 'Лечебное дело, стоматология, фармация.', badge: null },
-    kg: { name: 'Медицина факультети', description: 'Дарылоо иши, стоматология, фармация.', badge: null },
-    en: { name: 'Faculty of Medicine', description: 'General medicine, dentistry and pharmacy.', badge: null },
+  lechebnoe: {
+    ru: { name: 'Факультет лечебного дела', description: 'Терапия, хирургия, внутренние болезни. Клинические базы в ведущих больницах Бишкека.', badge: 'Популярное' },
+    kg: { name: 'Дарылоо иши факультети', description: 'Терапия, хирургия, ички оорулар. Бишкектин алдыңкы ооруканаларында клиникалык базалар.', badge: 'Атактуу' },
+    en: { name: 'Faculty of General Medicine', description: 'Therapy, surgery and internal medicine. Clinical bases in leading hospitals of Bishkek.', badge: 'Popular' },
   },
-  it: {
-    ru: { name: 'Факультет IT и программирования', description: 'Искусственный интеллект, кибербезопасность, разработка ПО.', badge: 'IT' },
-    kg: { name: 'IT жана программалоо факультети', description: 'Жасалма интеллект, киберкоопсуздук, программалык камсыздоо.', badge: 'IT' },
-    en: { name: 'Faculty of IT and Programming', description: 'Artificial intelligence, cybersecurity and software development.', badge: 'IT' },
+  pharmacy: {
+    ru: { name: 'Факультет фармации', description: 'Фармация, клиническая фармация, фармакоэкономика. Современные лаборатории и партнёрство с фармацевтическими компаниями.', badge: null },
+    kg: { name: 'Фармация факультети', description: 'Фармация, клиникалык фармация, фармакоэкономика. Заманбап лабораториялар жана фармацевтикалык компаниялар менен өнөктөштүк.', badge: null },
+    en: { name: 'Faculty of Pharmacy', description: 'Pharmacy, clinical pharmacy and pharmacoeconomics. Modern laboratories and partnerships with pharmaceutical companies.', badge: null },
   },
-  pedagogy: {
-    ru: { name: 'Педагогический факультет', description: 'Начальное, среднее и дополнительное образование.', badge: null },
-    kg: { name: 'Педагогика факультети', description: 'Башталгыч, орто жана кошумча билим берүү.', badge: null },
-    en: { name: 'Faculty of Pedagogy', description: 'Primary, secondary and additional education.', badge: null },
-  },
-  engineering: {
-    ru: { name: 'Инженерный факультет', description: 'Строительство, энергетика, автоматизация.', badge: null },
-    kg: { name: 'Инженердик факультет', description: 'Курулуш, энергетика, автоматташтыруу.', badge: null },
-    en: { name: 'Faculty of Engineering', description: 'Construction, energy and automation.', badge: null },
-  },
-  law: {
-    ru: { name: 'Юридический факультет', description: 'Гражданское, уголовное и международное право.', badge: null },
-    kg: { name: 'Юридикалык факультет', description: 'Жарандык, кылмыш жана эл аралык укук.', badge: null },
-    en: { name: 'Faculty of Law', description: 'Civil, criminal and international law.', badge: null },
+  pediatrics: {
+    ru: { name: 'Факультет педиатрии', description: 'Педиатрия, детская хирургия, неонатология. Углублённая подготовка по работе с детьми всех возрастов.', badge: null },
+    kg: { name: 'Педиатрия факультети', description: 'Педиатрия, балдар хирургиясы, неонатология. Бардык курактагы балдар менен иштөө боюнча терең даярдык.', badge: null },
+    en: { name: 'Faculty of Pediatrics', description: 'Pediatrics, pediatric surgery and neonatology. In-depth training for working with children of all ages.', badge: null },
   },
 }
 

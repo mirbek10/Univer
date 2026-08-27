@@ -35,7 +35,7 @@ const COPY = {
     labsTitle: 'Лаборатории',
     confUpcoming: 'Предстоящие',
     confPast: 'Прошедшие',
-    grantIntro: 'КГУ активно поддерживает учёных в получении международных грантов.',
+    grantIntro: 'КММУ активно поддерживает учёных в получении международных грантов.',
     apply: 'Подать заявку',
   },
   kg: {
@@ -53,7 +53,7 @@ const COPY = {
     labsTitle: 'Лабораториялар',
     confUpcoming: 'Жакында боло тургандар',
     confPast: 'Өткөндөр',
-    grantIntro: 'КМУ илимпоздорду эл аралык гранттарды алууда активдүү колдойт.',
+    grantIntro: 'КММУ илимпоздорду эл аралык гранттарды алууда активдүү колдойт.',
     apply: 'Өтүнмө берүү',
   },
   en: {
@@ -71,7 +71,7 @@ const COPY = {
     labsTitle: 'Laboratories',
     confUpcoming: 'Upcoming',
     confPast: 'Past',
-    grantIntro: 'KSU actively supports researchers in obtaining international grants.',
+    grantIntro: 'KMMU actively supports researchers in obtaining international grants.',
     apply: 'Apply',
   },
 }
@@ -142,35 +142,35 @@ const LAB_DATA = {
 const CONFERENCES = {
   ru: {
     upcoming: [
-      { title: 'International Conference on Digital Innovations', date: '15–17 апреля 2025', location: 'Бишкек, КГУ' },
-      { title: 'Центральноазиатский форум по возобновляемой энергетике', date: '6–8 мая 2025', location: 'Бишкек, КГУ' },
-      { title: 'Конференция молодых учёных КГУ', date: '22 марта 2025', location: 'Бишкек, КГУ' },
+      { title: 'International Conference on Medical Innovations', date: '15–17 апреля 2025', location: 'Бишкек, КММУ' },
+      { title: 'Центральноазиатский форум по медицинскому образованию', date: '6–8 мая 2025', location: 'Бишкек, КММУ' },
+      { title: 'Конференция молодых учёных КММУ', date: '22 марта 2025', location: 'Бишкек, КММУ' },
     ],
     past: [
       { title: 'IV Евразийская конференция по биомедицине', date: '10–12 октября 2024', location: 'Алматы / онлайн' },
-      { title: 'Forum of Educators of Central Asia', date: '5–7 сентября 2024', location: 'Бишкек, КГУ' },
+      { title: 'Forum of Educators of Central Asia', date: '5–7 сентября 2024', location: 'Бишкек, КММУ' },
     ],
   },
   kg: {
     upcoming: [
-      { title: 'Digital Innovations эл аралык конференциясы', date: '2025-жылдын 15–17-апрели', location: 'Бишкек, КМУ' },
-      { title: 'Кайра жаралуучу энергетика боюнча Борбор Азия форуму', date: '2025-жылдын 6–8-майы', location: 'Бишкек, КМУ' },
-      { title: 'КМУнун жаш илимпоздор конференциясы', date: '2025-жылдын 22-марты', location: 'Бишкек, КМУ' },
+      { title: 'Digital Innovations эл аралык конференциясы', date: '2025-жылдын 15–17-апрели', location: 'Бишкек, КММУ' },
+      { title: 'Кайра жаралуучу энергетика боюнча Борбор Азия форуму', date: '2025-жылдын 6–8-майы', location: 'Бишкек, КММУ' },
+      { title: 'КММУнун жаш илимпоздор конференциясы', date: '2025-жылдын 22-марты', location: 'Бишкек, КММУ' },
     ],
     past: [
       { title: 'Биомедицина боюнча IV Евразия конференциясы', date: '2024-жылдын 10–12-октябры', location: 'Алматы / онлайн' },
-      { title: 'Борбор Азиянын мугалимдер форуму', date: '2024-жылдын 5–7-сентябры', location: 'Бишкек, КМУ' },
+      { title: 'Борбор Азиянын мугалимдер форуму', date: '2024-жылдын 5–7-сентябры', location: 'Бишкек, КММУ' },
     ],
   },
   en: {
     upcoming: [
-      { title: 'International Conference on Digital Innovations', date: 'April 15–17, 2025', location: 'Bishkek, KSU' },
-      { title: 'Central Asian Forum on Renewable Energy', date: 'May 6–8, 2025', location: 'Bishkek, KSU' },
-      { title: 'KSU Young Scientists Conference', date: 'March 22, 2025', location: 'Bishkek, KSU' },
+      { title: 'International Conference on Medical Innovations', date: 'April 15–17, 2025', location: 'Bishkek, KMMU' },
+      { title: 'Central Asian Forum on Medical Education', date: 'May 6–8, 2025', location: 'Bishkek, KMMU' },
+      { title: 'KMMU Young Scientists Conference', date: 'March 22, 2025', location: 'Bishkek, KMMU' },
     ],
     past: [
       { title: 'IV Eurasian Conference on Biomedicine', date: 'October 10–12, 2024', location: 'Almaty / online' },
-      { title: 'Forum of Educators of Central Asia', date: 'September 5–7, 2024', location: 'Bishkek, KSU' },
+      { title: 'Forum of Educators of Central Asia', date: 'September 5–7, 2024', location: 'Bishkek, KMMU' },
     ],
   },
 }
