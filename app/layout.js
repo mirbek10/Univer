@@ -4,22 +4,73 @@ import { I18nProvider } from '@/shared/lib/useI18n'
 import Header from '@/widgets/Header'
 import Footer from '@/widgets/Footer'
 import ToastContainerWidget from '@/widgets/ToastContainer'
+import icon from "../public/favicon.svg"
+
+const BASE_URL = 'https://kmmy.kg'
 
 export const metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'КММУ — Кыргызский международный медицинский университет',
     template: '%s | КММУ',
   },
-  description: 'Кыргызский международный медицинский университет — ведущий медицинский вуз Кыргызстана. Современные программы в медицине, стоматологии, фармации и педиатрии.',
-  keywords: ['КММУ', 'Кыргызский международный медицинский университет', 'медицинский университет', 'образование', 'Бишкек', 'Кыргызстан'],
-  authors: [{ name: 'КММУ' }],
+  description:
+    'Кыргызский международный медицинский университет — ведущий медицинский вуз Кыргызстана. Аккредитован WFME. Программы по медицине, стоматологии, фармации и педиатрии в Бишкеке.',
+  keywords: [
+    'КММУ',
+    'Кыргызский международный медицинский университет',
+    'медицинский университет Кыргызстан',
+    'медицинский вуз Бишкек',
+    'поступление в медицинский',
+    'стоматология',
+    'педиатрия',
+    'фармация',
+    'лечебное дело',
+    'WFME аккредитация',
+  ],
+  authors: [{ name: 'КММУ', url: BASE_URL }],
+  creator: 'КММУ',
+  publisher: 'Кыргызский международный медицинский университет',
+  category: 'education',
+  alternates: {
+    canonical: BASE_URL,
+  },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: "/icon", type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',
+    url: BASE_URL,
     locale: 'ru_RU',
-    siteName: 'Кыргызский международный медицинский университет',
+    siteName: 'КММУ — Кыргызский международный медицинский университет',
+    title: 'КММУ — Кыргызский международный медицинский университет',
+    description:
+      'Ведущий медицинский вуз Кыргызстана. Аккредитован WFME. Программы по медицине, стоматологии, фармации и педиатрии.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'КММУ — Кыргызский международный медицинский университет',
+    description:
+      'Ведущий медицинский вуз Кыргызстана. Аккредитован WFME. Программы по медицине, стоматологии, фармации и педиатрии.',
+    site: '@kmmy_kg',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '95d0345a5d36c216',
   },
 }
 
@@ -39,6 +90,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        
       </head>
       <body>
         <I18nProvider>
